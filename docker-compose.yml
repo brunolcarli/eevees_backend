@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  eevees:
+    build: .    
+    image: eevees:devel
+    restart: on-failure
+    container_name: eevees_container
+    command: gunicorn -w 3 eevees.wsgi:application -b :7735
+    env_file: eevees/environment/eevees.env
+    volumes:
+      - .:/app
+      - static_data:/app/static
+    ports:
+      - "7735:7735"
+volumes:
+  static_data:
