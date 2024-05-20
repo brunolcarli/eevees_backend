@@ -4,6 +4,7 @@ django-filter==2.0.0
 django-graphql-jwt==0.2.1
 PyJWT==1.7.0
 django-cors-headers==3.0.2
+beautifulsoup4==4.12.2
 
 sqlparse==0.4.1
 mysql-connector-python==8.0.32
